@@ -6,6 +6,6 @@ To put it simply, this discord bot was made for the funnies. However, this bot i
 
 <h4>Available Commands ⁓ Prefix: <code>babygirl <<span>cmd</span>></h4></code>
 <list>
-<li> "JoJo" : Autoresponder—Sets off with the term "JoJo" includes anywhere in the message to send <span style="color: #b193e1">JJBA</span> gifs. <span style="color: #dc8080; font-weight: bold;">[ WARNING :: I do not control what gif is allowed to be sent. Beware as there might be spoilers ] </span>
+<li> "JoJo" : Autoresponder—Sets off with the term "JoJo" includes anywhere in the message to send <span style="color: #b193e1">JJBA</span> gifs. <span style="color: #dc8080; font-weight: bold;"><br>[ WARNING :: I do not control what gif is allowed to be sent. Beware as there might be spoilers ] </span>
 <li><code>ping</code> : Returns as "Pong!" along with a measurement on API latency.
 </list>

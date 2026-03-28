@@ -8,4 +8,8 @@ To put it simply, this discord bot was made for the funnies. However, this bot i
 <list>
 <li> "JoJo" : Autoresponder—Sets off with the term "JoJo" includes anywhere in the message to send <span style="color: #b193e1">JJBA</span> gifs. <span style="color: #dc8080; font-weight: bold;"><br>[ WARNING :: I do not control what gif is allowed to be sent. Beware as there might be spoilers ] </span>
 <li><code>ping</code> : Returns as "Pong!" along with a measurement on API latency.
+<li><code>help</code> : Lists all available commands along with all autoresponders and slash commands.
+<li><code>say</code> : You can simply send messages as the bot.
+<li><code>test</code> : This command will test to check if the command handler is working as expected. Added a counter because why not.
 </list>
+<li><code>/say <span><<span>character><span> <<span>message></code> : Literally the same thing as the say command except you can choose any provided character.

@@ -72,10 +72,10 @@ client.on(Events.MessageCreate, async (message) => {
 });
 
 export const slashCommands = new Collection<string, any>();
-const slashFiles = fs.readdirSync("./slashcommands").filter((f) => f.endsWith(".ts"));
+const slashFiles = fs.readdirSync("./slashCommands").filter((f) => f.endsWith(".ts"));
 
 for (const file of slashFiles) {
-	const command = (await import(`./slashcommands/${file}`)).default;
+	const command = (await import(`./slashCommands/${file}`)).default;
 	slashCommands.set(command.data.name, command);
 }
 

@@ -8,9 +8,10 @@ export default {
 	async execute(message: any, args: string, Embed: any) {
 		const list = [...commands.values()].map((cmd) => `**${cmd.name}** - *${cmd.description}*`).join("\n");
 		const arList = [...autoResCommands.values()]
-			.flatMap((cmd) =>
-				Array.isArray(cmd.name) ? `**${cmd.name}** - *${cmd.description}*` : `**${[cmd.name]}** - *${cmd.description}*`,
-			)
+			.flatMap((cmd) => {
+				const names = Array.isArray(cmd.name) ? cmd.name : [cmd.name];
+				return names.map((n: string) => `**${n}** - *${cmd.description}*`);
+			})
 			.join("\n");
 		const sList = [...slashCommands.values()].map((cmd) => `**/${cmd.name}** - *${cmd.description}*`).join("\n");
 		message.reply({

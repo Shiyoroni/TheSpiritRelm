@@ -34,17 +34,18 @@ export const autoResCommands = new Collection<string, any>();
 const commandFiles = fs.readdirSync("./commands").filter((file) => file.toString().endsWith(".ts"));
 const autoResFiles = fs.readdirSync("./commands/autoresponder").filter((file) => file.toString().endsWith(".ts"));
 
+for (const file of commandFiles) {
+	const command = (await import(`./commands/${file}`)).default;
+	commands.set(command.name, command);
+}
+
+for (const file of autoResFiles) {
+	const command = (await import(`./commands/autoresponder/${file}`)).default;
+	autoResCommands.set(command.name, command);
+}
+
+
 client.on(Events.MessageCreate, async (message) => {
-	for (const file of commandFiles) {
-		const command = (await import(`./commands/${file}`)).default;
-		commands.set(command.name, command);
-	}
-
-	for (const file of autoResFiles) {
-		const command = (await import(`./commands/autoresponder/${file}`)).default;
-		autoResCommands.set(command.name, command);
-	}
-
 	let prefixes = ["babygirl", "bbg"];
 	let PREFIX = prefixes.find((p) => message.content.toLowerCase().startsWith(p));
 	if (message.author.bot) return;
